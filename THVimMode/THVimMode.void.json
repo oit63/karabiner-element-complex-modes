@@ -1,0 +1,36 @@
+{
+  "title": "THVimMode.void",
+  "rules": [
+	  
+    {
+      "description": "THVimMode.void",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "any": "key_code",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "THVIMMODE",
+              "value": 1
+            }
+          ]
+        }
+
+      ]
+    }
+	
+  ]
+}

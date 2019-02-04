@@ -1,0 +1,165 @@
+{
+	"title": "THMouseMode.ScrollMode.NormalMode.direction(left,up,down,right)",
+	"rules": [
+		{
+			"description": "THMouseMode.ScrollMode.NormalMode.direction.up(o)",
+			"manipulators": [
+		        {
+		          "type": "basic",
+		          "from": {
+		            "key_code": "o",
+		            "modifiers": {
+		              "optional": [
+		                "any"
+		              ]
+		            }
+		          },
+		          "to": [
+		            {
+		              "mouse_key": {
+		                "vertical_wheel": -32
+		              }
+		            }
+		          ],
+				  "conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_SCROLLMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_SCROLLMODE_NORMALMODE",
+							"value": 1
+						}
+					]
+		        }
+			]
+		},
+		{
+			"description": "THMouseMode.ScrollMode.NormalMode.direction.down(i)",
+			"manipulators": [
+		        {
+		          "type": "basic",
+		          "from": {
+		            "key_code": "i",
+		            "modifiers": {
+		              "optional": [
+		                "any"
+		              ]
+		            }
+		          },
+		          "to": [
+		            {
+		              "mouse_key": {
+		                "vertical_wheel": 32
+		              }
+		            }
+		          ],
+				  "conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_SCROLLMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_SCROLLMODE_NORMALMODE",
+							"value": 1
+						}
+					]
+		        }
+			]
+		},
+		{
+			"description": "THMouseMode.ScrollMode.NormalMode.direction.left(n)",
+			"manipulators": [
+		        {
+		          "type": "basic",
+		          "from": {
+		            "key_code": "n",
+		            "modifiers": {
+		              "optional": [
+		                "any"
+		              ]
+		            }
+		          },
+		          "to": [
+		            {
+		              "mouse_key": {
+		                "horizontal_wheel": 32
+		              }
+		            }
+		          ],
+				  "conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_SCROLLMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_SCROLLMODE_NORMALMODE",
+							"value": 1
+						}
+					]
+		        }
+			]
+		},
+		{
+			"description": "THMouseMode.ScrollMode.NormalMode.direction.right(h)",
+			"manipulators": [
+		        {
+		          "type": "basic",
+		          "from": {
+		            "key_code": "h",
+		            "modifiers": {
+		              "optional": [
+		                "any"
+		              ]
+		            }
+		          },
+		          "to": [
+		            {
+		              "mouse_key": {
+		                "horizontal_wheel": -32
+		              }
+		            }
+		          ],
+				  "conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_SCROLLMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_SCROLLMODE_NORMALMODE",
+							"value": 1
+						}
+					]
+		        }
+			]
+		}
+	]
+}

@@ -1,0 +1,81 @@
+{
+  "title": "THVimMode.model.movement.word(forward,backword)",
+  "rules": [
+	  
+    {
+      "description": "THVimMode.model.movement.word.forward(t)",
+      "manipulators": [
+		  
+		          {
+		            "type": "basic",
+		            "from": {
+		              "key_code": "t",
+		              "modifiers": {
+		                "optional": [
+		                  "caps_lock"
+		                ]
+		              }
+		            },
+		            "to": [
+		              {
+		                "key_code": "right_arrow",
+		                "modifiers": [
+		                  "left_option"
+		                ]
+		              }
+		            ],
+		            "to_after_key_up": [
+		              {
+		                "key_code": "vk_none"
+		              }
+		            ],
+		            "conditions": [
+		              {
+		                "type": "variable_if",
+		                "name": "THVIMMODE",
+		                "value": 1
+		              }
+		            ]
+		          }
+      ]
+    },
+    {
+      "description": "THVimMode.model.movement.word.bacward(a)",
+      "manipulators": [
+		  
+		          {
+		            "type": "basic",
+		            "from": {
+		              "key_code": "a",
+		              "modifiers": {
+		                "optional": [
+		                  "caps_lock"
+		                ]
+		              }
+		            },
+		            "to": [
+		              {
+		                "key_code": "left_arrow",
+		                "modifiers": [
+		                  "left_option"
+		                ]
+		              }
+		            ],
+		            "to_after_key_up": [
+		              {
+		                "key_code": "vk_none"
+		              }
+		            ],
+		            "conditions": [
+		              {
+		                "type": "variable_if",
+		                "name": "THVIMMODE",
+		                "value": 1
+		              }
+		            ]
+		          }
+      ]
+    }
+	
+  ]
+}

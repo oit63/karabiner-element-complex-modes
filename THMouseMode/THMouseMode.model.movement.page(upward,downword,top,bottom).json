@@ -1,0 +1,148 @@
+{
+	"title": "THMouseMode.model.movement.page(upward,downword,top,bottom)",
+	"rules": [
+		{
+			"description": "THMouseMode.model.movement.page.upward(period)",
+			"manipulators": [
+		  
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "period",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "page_up"
+						}
+					],
+					"to_after_key_up": [
+						{
+							"key_code": "vk_none"
+						}
+					],
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						}
+					]
+				}
+			]
+		},	  
+		{
+			"description": "THMouseMode.model.movement.page.downward(comma)",
+			"manipulators": [
+		  
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "comma",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "page_down"
+						}
+					],
+					"to_after_key_up": [
+						{
+							"key_code": "vk_none"
+						}
+					],
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						}
+					]
+				}
+			]
+		},	  
+		{
+			"description": "THMouseMode.model.movement.page.top(l)",
+			"manipulators": [
+		  
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "l",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							]
+						}
+					},
+		            "to": [
+		              {
+		                "key_code": "up_arrow",
+		                "modifiers": [
+		                  "left_command"
+		                ]
+		              }
+		            ],
+					"to_after_key_up": [
+						{
+							"key_code": "vk_none"
+						}
+					],
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						}
+					]
+				}
+			]
+		},	  
+		{
+			"description": "THMouseMode.model.movement.page.bottom(r)",
+			"manipulators": [
+		  
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "r",
+						"modifiers": {
+							"optional": [
+								"caps_lock"
+							]
+						}
+					},
+		            "to": [
+		              {
+		                "key_code": "down_arrow",
+		                "modifiers": [
+		                  "left_command"
+		                ]
+		              }
+		            ],
+					"to_after_key_up": [
+						{
+							"key_code": "vk_none"
+						}
+					],
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						}
+					]
+				}
+			]
+		}
+	
+	]
+}

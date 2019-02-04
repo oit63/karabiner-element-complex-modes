@@ -1,0 +1,36 @@
+{
+  "title": "THMouseMode.void",
+  "rules": [
+	  
+    {
+      "description": "THMouseMode.void",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "any": "key_code",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "THMOUSEMODE",
+              "value": 1
+            }
+          ]
+        }
+
+      ]
+    }
+	
+  ]
+}

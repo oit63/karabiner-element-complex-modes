@@ -1,0 +1,119 @@
+{
+  "title": "THVimMode.model.movement.direction(left,up,down,right)",
+  "rules": [
+    {
+      "description": "THVimMode.model.movement.direction.up(o)",
+      "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "o",
+              "modifiers": {
+                "optional": [
+                  "caps_lock"
+                ]
+              }
+            },
+            "to": [
+	            {
+	              "key_code": "up_arrow"
+	            }
+            ],
+            "conditions": [
+              {
+                "type": "variable_if",
+                "name": "THVIMMODE",
+                "value": 1
+              }
+            ]
+          }
+      ]
+    },
+    {
+      "description": "THVimMode.model.movement.direction.down(i)",
+      "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "i",
+              "modifiers": {
+                "optional": [
+                  "caps_lock"
+                ]
+              }
+            },
+            "to": [
+	            {
+	              "key_code": "down_arrow"
+	            }
+            ],
+            "conditions": [
+              {
+                "type": "variable_if",
+                "name": "THVIMMODE",
+                "value": 1
+              }
+            ]
+          }
+      ]
+    },
+    {
+      "description": "THVimMode.model.movement.direction.left(n)",
+      "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "n",
+              "modifiers": {
+                "optional": [
+                  "caps_lock"
+                ]
+              }
+            },
+            "to": [
+	            {
+	              "key_code": "left_arrow"
+	            }
+            ],
+            "conditions": [
+              {
+                "type": "variable_if",
+                "name": "THVIMMODE",
+                "value": 1
+              }
+            ]
+          }
+      ]
+    },
+    {
+      "description": "THVimMode.model.movement.direction.right(h)",
+      "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "h",
+              "modifiers": {
+                "optional": [
+                  "caps_lock"
+                ]
+              }
+            },
+            "to": [
+	            {
+	              "key_code": "right_arrow"
+	            }
+            ],
+            "conditions": [
+              {
+                "type": "variable_if",
+                "name": "THVIMMODE",
+                "value": 1
+              }
+            ]
+          }
+      ]
+    }
+	
+	
+  ]
+}

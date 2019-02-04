@@ -1,0 +1,110 @@
+{
+  "title": "THMouseMode.ScrollMode.NormalMode.controller",
+  "rules": [
+    {
+      "description": "THMouseMode.ScrollMode.NormalMode.controller()",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+			"key_code": "a",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "THMOUSEMODE_MOVEMENTMODE",
+                "value": 0
+              }
+            },
+            {
+              "set_variable": {
+                "name": "THMOUSEMODE_SCROLLMODE_SLOWMODE",
+                "value": 0
+              }
+            },
+            {
+              "set_variable": {
+                "name": "THMOUSEMODE_SCROLLMODE_FASTMODE",
+                "value": 0
+              }
+            },
+            {
+              "set_variable": {
+                "name": "THMOUSEMODE_SCROLLMODE",
+                "value": 1
+              }
+            },
+            {
+              "set_variable": {
+                "name": "THMOUSEMODE_SCROLLMODE_NORMALMODE",
+                "value": 1
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "THMOUSEMODE",
+              "value": 1
+            },
+            {
+              "type": "variable_if",
+              "name": "THMOUSEMODE_SCROLLMODE",
+              "value": 0
+            }
+          ]
+        }
+      ] 
+    },
+	
+	
+    {
+      "description": "THMouseMode.ScrollMode.NormalMode.backToMovementMode.controller()",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+			"key_code": "a",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "THMOUSEMODE_SCROLLMODE",
+                "value": 0
+              }
+            },
+            {
+              "set_variable": {
+                "name": "THMOUSEMODE_MOVEMENTMODE",
+                "value": 1
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "THMOUSEMODE",
+              "value": 1
+            },
+            {
+              "type": "variable_if",
+              "name": "THMOUSEMODE_SCROLLMODE",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+	
+  ]
+}

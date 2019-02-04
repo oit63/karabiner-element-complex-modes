@@ -1,0 +1,167 @@
+{
+	"title": "THMouseMode.MovementMode.FastMode.model.direction(left,up,down,right)",
+	"rules": [
+		{
+			"description": "THMouseMode.MovementMode.FastMode.model.direction.up(o)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "o",
+						"modifiers": {
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [
+						{
+							"mouse_key": {
+								"y": -3379
+							}
+						}
+					],
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_MOVEMENTMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_MOVEMENTMODE_FASTMODE",
+							"value": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "THMouseMode.MovementMode.FastMode.model.direction.down(i)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "i",
+						"modifiers": {
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [
+						{
+							"mouse_key": {
+								"y": 3379
+							}
+						}
+					],
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_MOVEMENTMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_MOVEMENTMODE_FASTMODE",
+							"value": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "THMouseMode.MovementMode.FastMode.model.direction.left(n)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "n",
+						"modifiers": {
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [
+						{
+							"mouse_key": {
+								"x": -3379
+							}
+						}
+					],
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_MOVEMENTMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_MOVEMENTMODE_FASTMODE",
+							"value": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "THMouseMode.MovementMode.FastMode.model.direction.up(h)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "h",
+						"modifiers": {
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [
+						{
+							"mouse_key": {
+								"x": 3379
+							}
+						}
+					],
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_MOVEMENTMODE",
+							"value": 1
+						},
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE_MOVEMENTMODE_FASTMODE",
+							"value": 1
+						}
+					]
+				}
+			]
+		}
+
+	
+	]
+}

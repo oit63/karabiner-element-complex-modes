@@ -1,0 +1,81 @@
+{
+  "title": "THVimMode.model.movement.teleport(dock,menu,status)",
+  "rules": [
+	  
+    {
+      "description": "THVimMode.model.movement.teleport.dock(f)",
+      "manipulators": [
+		  
+		          {
+		            "type": "basic",
+		            "from": {
+		              "key_code": "f",
+		              "modifiers": {
+		                "optional": [
+		                  "caps_lock"
+		                ]
+		              }
+		            },
+		            "to": [
+		              {
+		                "key_code": "f3",
+		                "modifiers": [
+		                  "left_control"
+		                ]
+		              }
+		            ],
+		            "to_after_key_up": [
+		              {
+		                "key_code": "vk_none"
+		              }
+		            ],
+		            "conditions": [
+		              {
+		                "type": "variable_if",
+		                "name": "THVIMMODE",
+		                "value": 1
+		              }
+		            ]
+		          }
+      ]
+    },
+    {
+      "description": "THVimMode.model.movement.teleport.menubar(q)",
+      "manipulators": [
+		  
+		          {
+		            "type": "basic",
+		            "from": {
+		              "key_code": "q",
+		              "modifiers": {
+		                "optional": [
+		                  "caps_lock"
+		                ]
+		              }
+		            },
+		            "to": [
+		              {
+		                "key_code": "f2",
+		                "modifiers": [
+		                  "left_control"
+		                ]
+		              }
+		            ],
+		            "to_after_key_up": [
+		              {
+		                "key_code": "vk_none"
+		              }
+		            ],
+		            "conditions": [
+		              {
+		                "type": "variable_if",
+		                "name": "THVIMMODE",
+		                "value": 1
+		              }
+		            ]
+		          }
+      ]
+    }
+	
+  ]
+}

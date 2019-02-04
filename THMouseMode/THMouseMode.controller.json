@@ -1,0 +1,90 @@
+{
+  "title": "THMouseMode.controller",
+  "rules": [
+    {
+      "description": "THMouseMode.controller",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+			"pointing_button": "button16",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "THMOUSEMODE",
+                "value": 1
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "THMOUSEMODE",
+              "value": 0
+            }
+          ]
+        },
+		
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button16",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+              {
+                "set_variable": {
+                  "name": "THMOUSEMODE",
+                  "value": 0
+                }
+              }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "THMOUSEMODE",
+              "value": 1
+            }
+          ]
+        },
+		
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "THMOUSEMODE",
+                "value": 0
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "THMOUSEMODE",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

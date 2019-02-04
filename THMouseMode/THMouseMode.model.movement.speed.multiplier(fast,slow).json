@@ -1,0 +1,65 @@
+{
+  "title": "THMouseMode.model.movement.speed.multiplier(fast,slow)",
+  "rules": [
+    {
+      "description": "THMouseMode.model.movement.speed.multiplier.positive(w)",
+      "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "w",
+              "modifiers": {
+                "optional": [
+                  "any"
+                ]
+              }
+            },
+            "to": [
+              {
+                "mouse_key": {
+                  "speed_multiplier": 2.56
+                }
+              }
+            ],
+            "conditions": [
+              {
+                "type": "variable_if",
+                "name": "THMOUSEMODE",
+                "value": 1
+              }
+            ]
+          }
+      ]
+    },
+    {
+      "description": "THMouseMode.model.movement.speed.multiplier.negative(d)",
+      "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "d",
+              "modifiers": {
+                "optional": [
+                  "any"
+                ]
+              }
+            },
+            "to": [
+              {
+                "mouse_key": {
+                  "speed_multiplier": 0.390625
+                }
+              }
+            ],
+            "conditions": [
+              {
+                "type": "variable_if",
+                "name": "THMOUSEMODE",
+                "value": 1
+              }
+            ]
+          }
+      ]
+    }
+  ]
+}

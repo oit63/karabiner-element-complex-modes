@@ -1,0 +1,90 @@
+{
+	"title": "THMouseMode.model.click(left,middle,right)",
+	"rules": [
+		{
+			"description": "THMouseMode.model.click.select(t)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "t",
+						"modifiers": {
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [
+						{
+							 "pointing_button": "button1"
+						}
+					],
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "THMouseMode.model.click.middle(e)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "e",
+						"modifiers": {
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [
+						{
+							"pointing_button": "button2"
+						}
+					],
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "THMouseMode.model.click.option(s)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "s",
+						"modifiers": {
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [
+						{
+							"pointing_button": "button3"
+						}
+					],
+					"conditions": [
+						{
+							"type": "variable_if",
+							"name": "THMOUSEMODE",
+							"value": 1
+						}
+					]
+				}
+			]
+		}
+	
+	]
+}
